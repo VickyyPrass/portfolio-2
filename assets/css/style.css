@@ -1,0 +1,744 @@
+* {
+    box-sizing: border-box !important;
+    list-style: none;
+    text-decoration: none;
+    /* width: 100%; */
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/** ============================================================
+==================  = Intro Profile ============================
+================================================================
+*/
+
+.bg-image {
+    background-image: url(../img/header-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 600px;
+    width: 100%;
+    border-bottom: 5px solid #4e4e4e;
+}
+
+hr {
+    width: 200px;
+    border: 2px solid rgb(22, 117, 226);
+    outline: none;
+    margin: -40px auto 0;
+}
+
+
+/** ============================================================
+======================== Navbar ================================
+================================================================
+*/
+
+div.intro {
+    position: relative;
+}
+
+nav {
+    color: #fff;
+    font-size: 20px;
+}
+
+.navbar-brand,
+.nav-link {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+nav a.navbar-brand {
+    color: #fff;
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+}
+
+nav .menu-list ul li {
+    display: flex;
+}
+
+.menu-list ul li a.nav-link {
+    color: #fff;
+}
+
+nav.navbar-dark.bg-dark {
+    background-color: rgb(22, 117, 226) !important;
+    transition: all 0.5s;
+    -webkit-animation: navbar 0.5s;
+    animation: navbar 0.5s;
+}
+
+@-webkit-keyframes navbar {
+    from {
+        margin-top: 10px;
+        transform: translateY(-100px);
+    }
+    to {
+        margin-top: 0;
+        transform: translateY(0);
+    }
+}
+
+@keyframes navbar {
+    from {
+        margin-top: 10px;
+        transform: translateY(-100px);
+    }
+    to {
+        margin-top: 0;
+        transform: translateY(0);
+    }
+}
+
+
+/* hamburger menu */
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+
+/* hamburger menu animation */
+
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+    background-color: white;
+    transform: rotate(-45deg)translate(-1px, 0);
+}
+
+
+/*? Akhir Navbar */
+
+
+/** ============================================================
+====================== Profile =================================
+================================================================
+*/
+
+div.intro-profile .table {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+.title,
+.intro-subtitle {
+    text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1.title {
+    font-size: 3em !important;
+}
+
+p.intro-subtitle {
+    font-size: 2em;
+}
+
+div.intro-profile .table .text-slider-items {
+    display: none;
+}
+
+img.profile {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border: 5px solid #4e4e4e;
+}
+
+
+/*? Akhir Intro Profile */
+
+
+/** ============================================================
+======================== About =================================
+================================================================
+*/
+
+div.text-content {
+    padding: 40px;
+    box-shadow: 0 0 2px 1px black;
+    background-color: #fff;
+}
+
+h2.title-header-first,
+h2.title-header {
+    font-size: 50px;
+}
+
+h2.title-header-first {
+    margin: 120px 0 50px;
+}
+
+h2.title-header {
+    margin: 70px 0;
+}
+
+.skills {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.skills li {
+    margin-top: 20px;
+}
+
+.skills h3 {
+    font-size: 23px;
+}
+
+.skills span {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.progress1,
+.progress2,
+.progress3 {
+    background-color: #353b48;
+    display: block;
+    height: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress1 {
+    box-shadow: 0 0 10px orange;
+}
+
+.progress2 {
+    box-shadow: 0 0 10px blue;
+}
+
+.progress3 {
+    box-shadow: 0 0 10px yellow;
+}
+
+span .html {
+    height: 20px;
+    float: left;
+    background-color: orange;
+}
+
+span .css {
+    height: 20px;
+    float: left;
+    background-color: blue;
+}
+
+span .js {
+    height: 20px;
+    float: left;
+    background-color: yellow;
+}
+
+.html {
+    width: 90%;
+    -webkit-animation: html 3s;
+    animation: html 3s;
+}
+
+.css {
+    width: 85%;
+    -webkit-animation: css 3s;
+    animation: css 3s;
+}
+
+.js {
+    width: 60%;
+    -webkit-animation: js 3s;
+    animation: js 3s;
+}
+
+@-webkit-keyframes html {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes html {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 90%;
+    }
+}
+
+@-webkit-keyframes css {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 85%;
+    }
+}
+
+@keyframes css {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 85%;
+    }
+}
+
+@-webkit-keyframes js {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes js {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 60%;
+    }
+}
+
+.about .text-content p.hide {
+    display: none;
+}
+
+
+/*? End About */
+
+
+/** ============================================================
+======================== Services ==============================
+================================================================
+*/
+
+.services .card {
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 black;
+    background: linear-gradient(90deg, rgb(49, 39, 236) 0%, rgb(34, 68, 179) 23%, rgb(62, 189, 221) 100%);
+}
+
+.services .card,
+h5.card-title {
+    color: #fff;
+}
+
+.card-body a.icon {
+    color: #000;
+    text-decoration: none;
+}
+
+.card-body .icon-circle {
+    display: block;
+    border: 7px solid rgb(22, 117, 226);
+    padding: 20px;
+    width: 110px;
+    margin: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    background-color: #fff;
+    transition: all 1s;
+}
+
+.card-body .icon-circle:hover {
+    background-color: rgb(22, 117, 226);
+    color: #fff;
+    border: 7px solid rgb(182, 208, 238);
+}
+
+h5.card-title {
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+
+/*? End Services */
+
+
+/** ============================================================
+================ Work and Portfolio ============================
+================================================================
+*/
+
+.personality {
+    background-image: url(../img/work.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    color: #fff;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.personality::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-color: rgb(22, 117, 226);
+    position: absolute;
+    bottom: 0;
+}
+
+.statsbar {
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.stat .icon-stat {
+    display: block;
+    border: 9px solid rgb(218, 221, 224);
+    padding: 13px;
+    width: 80px;
+    margin: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: all 1s;
+}
+
+.stat-number {
+    font-size: 2.5em;
+}
+
+.stat .text {
+    font-size: 1.2em;
+}
+
+.statsbar .stat {
+    text-shadow: 1px 1px 30px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.box-portfolio {
+    margin-bottom: 15px;
+}
+
+.box img {
+    border-radius: 20px;
+}
+
+.work-img {
+    overflow: hidden;
+}
+
+.work-img img {
+    transition: all 1s;
+}
+
+.box-portfolio:hover img {
+    transform: scale(1.3);
+    cursor: zoom-in;
+}
+
+.vbox-close {
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    top: 0;
+    right: 10px;
+}
+
+.vbox-next,
+.vbox-prev {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+
+/*?End  Work and Portfolio */
+
+
+/** ============================================================
+========================= Contact ==============================
+================================================================
+*/
+
+.contact .form-group small {
+    color: #4e4e4e;
+}
+
+
+/* .contact .form-group textarea {
+    resize: none;
+} */
+
+.contact .box-contact {
+    background-color: #fff;
+    box-shadow: 0 0 2px 0 black;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.box-contact .box-social-media {
+    border: 3px solid rgb(204, 194, 194);
+    border-radius: 50%;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 5px 8px;
+    margin-right: 10px;
+}
+
+p.social-media a {
+    text-decoration: none;
+}
+
+.box-contact p.social-media a:nth-child(1) span {
+    background: linear-gradient(45deg, #FEC053, #EE243F, #AC3C96, #5655A4);
+}
+
+.box-contact p.social-media a:nth-child(1) span i,
+.box-contact p.social-media a:nth-child(4) span i {
+    padding-left: 2px;
+}
+
+.box-contact p.social-media a:nth-child(2) span {
+    background-color: #1da1f2;
+}
+
+.box-contact p.social-media a:nth-child(3) span {
+    background-color: #333;
+}
+
+.box-contact p.social-media a:nth-child(4) span {
+    background-color: #286782;
+}
+
+.box-contact p.social-media a span i {
+    color: #fff;
+    font-size: 28px;
+    padding-top: 3px;
+}
+
+
+/*? End Contact */
+
+
+/** ============================================================
+========================= Footer ===============================
+================================================================
+*/
+
+footer {
+    margin-top: 100px;
+    padding: 20px;
+    font-size: 16px;
+}
+
+footer span {
+    font-weight: 600;
+}
+
+
+/** ============================================================
+================================================================
+*/
+
+
+/*? RESPONSIVE  */
+
+
+/*? DESKTOP VERSION */
+
+@media (min-width: 992px) {
+    /*? Navbar */
+    nav {
+        height: 70px;
+    }
+    .navbar-brand {
+        margin-top: 5px;
+    }
+    .nav-link {
+        margin-bottom: 10px;
+    }
+    .menu-list ul li {
+        justify-content: flex-end;
+    }
+    .nav-link {
+        text-transform: uppercase;
+        margin-top: 30px;
+    }
+    .nav-link:hover::after {
+        content: "";
+        display: block;
+        border-bottom: 3px solid #fff;
+        margin: auto;
+        margin-bottom: -8px;
+        padding-bottom: 5px;
+        transition: all;
+    }
+    .nav-link:nth-child(1):hover::after,
+    .nav-link:nth-child(4):hover::after {
+        width: 50%;
+    }
+    .nav-link:nth-child(2):hover::after {
+        width: 40%;
+    }
+    .nav-link:nth-child(3):hover::after,
+    .nav-link:nth-child(5):hover::after {
+        width: 30%;
+    }
+    /*? End Navbar */
+}
+
+
+/*? TABLET VERSION */
+
+@media (max-width:800px) {
+    /*? Navbar */
+    .navbar-brand {
+        margin: 10px;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .menu-list ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: #000;
+        z-index: 1;
+        transform: translateY(-100%);
+        opacity: 0;
+        overflow: auto;
+        transition: all 1s;
+    }
+    .menu-list ul li a.nav-link:nth-child(1) {
+        margin-top: 80px;
+    }
+    nav .menu-list ul li {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-list a {
+        text-align: center;
+    }
+    .menu ul.slide {
+        opacity: 0.9;
+        transform: translateY(0);
+    }
+    /*? End Navbar */
+    /*? ======================================== */
+    /*? Profile */
+    h1.title {
+        font-size: 2.5em !important;
+    }
+    p.intro-subtitle {
+        font-size: 2em;
+    }
+    /*? End Profile */
+}
+
+
+/*? MOBILE VERSION */
+
+@media (max-width:600px) {
+    /*? Profile */
+    div.intro-profile .title {
+        font-size: 1.5em !important;
+    }
+    div.intro-profile .intro-subtitle {
+        font-size: 1.2em;
+    }
+    img.profile {
+        width: 150px;
+        height: 150px;
+        transform: translate(-50%, 30%);
+    }
+    /*? End Profile */
+    /*? ======================================== */
+    /*? Services */
+    .services .card {
+        margin: 15px 20px;
+    }
+    /*? Services */
+    /*? ======================================== */
+    .stat-number {
+        font-size: 1.8em;
+    }
+    .statsbar .text {
+        font-size: 1em;
+    }
+    .statsbar {
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+    .stat {
+        /* margin-bottom: 10px; */
+        margin: 0 20px;
+    }
+}
